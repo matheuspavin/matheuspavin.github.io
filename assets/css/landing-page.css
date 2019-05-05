@@ -1734,4 +1734,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   .contactMeInfo {
     margin-left: 15px;
   }
+
+  @media (max-width: 400px){
+    .landing-page .navbar-top{
+        padding-top: 10px;
+    }
+  
+    .landing-page .parallax .description{
+      margin-top: 200px;
+    }
+  
+    .landing-page .parallax {
+      height: 825px;
+    }
+  
+    .header-text{
+      margin-top: 10px;
+    }
+  
+    .logo-container .top-phrase{
+      width:90%;
+    }
+  
+    .contactMeInfo {
+      margin-left: 15px;
+      margin-top: 0;
+      margin-bottom: 75px;
+    }
+  }
 }
