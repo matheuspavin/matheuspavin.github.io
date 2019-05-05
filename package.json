@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/matheuspavin/matheuspavin.github.io#readme",
   "dependencies": {
-    "angular": "^1.6.10",
-    "bootstrap": "^4.1.0",
-    "font-awesome": "^4.7.0",
-    "material-icons": "^0.2.2"
+    "angular": "1.6.10",
+    "bootstrap": "4.1.0",
+    "font-awesome": "4.7.0",
+    "material-icons": "0.2.2"
   }
 }
