@@ -1869,7 +1869,7 @@ lila: #81689D;
   }
 
   .landing-page .parallax {
-    height: 675px;
+    height: auto;
   }
 
   .header-text {
@@ -1878,6 +1878,14 @@ lila: #81689D;
 
   .logo-container .top-phrase {
     width: 90%;
+  }
+
+  .icons {
+    font-size: 20px;
+  }
+
+  .flexbox-icons {
+    display: block;
   }
 
   .contactMeInfo {
@@ -1902,9 +1910,17 @@ lila: #81689D;
       width: 90%;
     }
 
+    .icons {
+      font-size: 20px;
+    }
+
+    .flexbox-icons {
+      display: block;
+    }
+
     .contactMeInfo {
       margin-left: 15px;
-      margin-top: 0;
+      margin-top: 30px;
       margin-bottom: 75px;
       min-height: 200px;
     }
