@@ -1,40 +1,4 @@
 h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6,
-p,
-.navbar,
-.brand,
-.btn-simple,
-a,
-.td-name,
-td {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
-  font-weight: 400;
-  margin: 30px 0 15px;
-}
-
-h1,
 .h1 {
   font-size: 52px;
 }
@@ -386,6 +350,7 @@ i {
 .section-gray {
   background-color: #EEEEEE;
 }
+
 /* palette 
 $primary-background: #1F2544;
 secondary-background: #474F7A;
@@ -730,10 +695,6 @@ lila: #81689D;
   opacity: 1;
 }
 
-.btn-pinterest {
-  border-color: #cc2127;
-  color: #cc2127;
-}
 
 .btn-pinterest:hover,
 .btn-pinterest:focus,
@@ -986,6 +947,7 @@ lila: #81689D;
   line-height: 24px;
 }
 
+/* NEW */
 .header-text-dark-bckgr {
   text-transform: uppercase;
   font-weight: 200;
@@ -1000,8 +962,22 @@ lila: #81689D;
   color: #5A6A9C;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
 .text-dark-secondary {
   color: #A8C256;
+}
+
+.description-lower-text {
+  transform: translateY(20px);
+  transition: transform s ease-out;
+}
+
+/* Target state: visible */
+.description-lower-text.is-visible {
+  transform: translateY(0);
 }
 
 .landing-page .navbar-top {
@@ -1019,6 +995,8 @@ lila: #81689D;
   display: block;
   background-size: 100%;
 }
+
+/*END NEW*/
 
 .landing-page .parallax .container {
   z-index: 2;
@@ -1862,11 +1840,22 @@ lila: #81689D;
   text-decoration: none;
   list-style-type: none;
   padding: 10px;
-  color: #D85B97;
+  color: #A8C256;
+}
+
+.icons li a:hover {
+  color: #AB4E68;
+}
+
+.flexbox-icons {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure the parent has a specified height */
 }
 
 .contactMeInfo {
-  margin-top: 50px;
+  margin-top: 100px;
   min-height: 200px;
 }
 
