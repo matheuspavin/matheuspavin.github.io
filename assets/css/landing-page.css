@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 h1,
 .h1 {
   font-size: 52px;
@@ -20,6 +26,45 @@ h4,
   line-height: 30px;
 }
 
+
+h1.big-text {
+    font-size: calc(20px + 6vw);
+    display: inline;
+    line-height: 1;
+    text-transform: lowercase;
+    width: 100%;
+    margin: 0 auto;
+    color: #A8C256;
+    font-weight: 300;
+}
+
+h1.big-text:hover:after {
+    content: 'Poorly written code can lead to project failure. I prioritize code readability and ease of maintenance, advocating for Test-Driven Development (TDD) to refactor code without risking system errors. I value teamwork, fostering strong bonds with colleagues to facilitate productive discussion and agreement.';
+    padding: 30px;
+    background: #a8c256eb;
+    color: #17161f;
+    border-radius: 16px;
+    position: absolute;
+    width: 50%;
+    min-width: 400px;
+    display: inline-flex;
+    margin-left: -87%;
+    /* margin-top: 5vw; */
+    font-size: 20px;
+    line-height: 1.4;
+    z-index: 4;
+    text-align: left;
+    /* box-shadow: 0 1px 8px 0px black; */
+    rotate: -2deg;
+    transition: all 1s ease-in-out;
+    border: 1px solid #17161f;
+    box-shadow: 0 4px 12px -7px rgb(78 20 121 / 64%);
+    /* max-height: 200px; */
+    overflow: scroll;
+    text-transform: none;
+    max-width: 500px;
+}
+
 h5,
 .h5 {
   font-size: 18px;
@@ -38,9 +83,24 @@ p {
   line-height: 1.5;
 }
 
+.hide{
+  display: none;
+}
 /*     General overwrite     */
+
+@font-face{
+    font-family: "Geist";
+    src: url('/fonts/geistvariablevf.woff2') format("woff2 supports variations"),
+        url('/fonts/geistvariablevf.woff2') format("woff2-variations");
+        font-size: 100 1000;
+  }
+
+  :root{
+    --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu","Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+  }
+
 body {
-  font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+  font-family: "Geist", Arial, sans-serif;
 }
 
 a {
@@ -342,7 +402,7 @@ i {
 
 
 .section {
-  padding: 30px 0;
+  padding: 60px 30px;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -350,6 +410,12 @@ i {
 .section-gray {
   background-color: #EEEEEE;
 }
+
+.description {
+    color: #fffffa;
+    padding: 60px 0px;
+}
+
 
 /* palette 
 $primary-background: #1F2544;
@@ -360,7 +426,7 @@ lila: #81689D;
 
 */
 .section-dark {
-  background-color: #2C272E;
+  background-color: #17161f;
 }
 
 .section-secondary-dark {
@@ -753,9 +819,9 @@ lila: #81689D;
 
 .landing-page .section p {
   margin-top: 30px;
-  line-height: 28px;
-  font-size: 18px;
-  font-weight: 200;
+  line-height: 1.4;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .landing-page .section-description h5 {
@@ -785,7 +851,7 @@ lila: #81689D;
 }
 
 .landing-page .section-clients {
-  padding: 50px 0;
+  padding: 100px 30px;
 }
 
 .landing-page .section-clients .info .icon {
@@ -892,11 +958,6 @@ lila: #81689D;
 
 
 .logo-container .logo {
-  overflow: hidden;
-  border-radius: 50%;
-  /* border: 1px solid #333333; */
-  width: 50px;
-  float: left;
 }
 
 .logo-container .brand {
@@ -912,25 +973,32 @@ lila: #81689D;
 
 .logo-container .top-phrase {
   font-size: 18px;
-  color: #FFFFFF;
+  color: #A8C256;
   line-height: 20px;
-  float: left;
   margin-left: 10px;
-  margin-top: 15px;
-  width: 500px;
-  height: 50px;
+  width: -webkit-fill-available;
 }
+
+.top-phrase span{
+    font-weight: 300;
+    font-size: 12px;
+    color: #FFFFFA;
+    line-height: 1.1;
+  }
 
 .logo-container {
   margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-container .logo img {
-  width: 100%;
+  width: 64px;
 }
 
 .landing-page1 .container {
   max-width: 970px;
+  margin: 0 auto;
 }
 
 .landing-page2 .container {
@@ -951,15 +1019,16 @@ lila: #81689D;
 .header-text-dark-bckgr {
   text-transform: uppercase;
   font-weight: 200;
-  color: #E1E1E6;
+  color: #A8C256;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 16px;
   position: relative;
   line-height: 24px;
+  font-weight: 600;
 }
 
 .text-dark-bckgr {
-  color: #5A6A9C;
+  color: #fffffa;
 }
 
 .text-align-left {
@@ -988,9 +1057,21 @@ lila: #81689D;
   z-index: 1030;
 }
 
+ul.nav{
+  display: flex;
+  flex-direction: row;
+}
+
+ul.nav li {
+  width: -webkit-fit-content;
+  text-decoration: none;
+  list-style: none;
+}
+
 .landing-page .parallax {
   width: 100%;
-  height: 600px;
+  height: 60vh;
+  min-height: 400px;
   overflow: hidden;
   display: block;
   background-size: 100%;
@@ -1006,6 +1087,7 @@ lila: #81689D;
   margin-right: auto;
   left: 0;
   right: 0;
+  margin-top: 100px;
 }
 
 .filter-gradient {
@@ -1038,13 +1120,14 @@ lila: #81689D;
   position: relative;
   z-index: 1;
   width: 100%;
-  /* height: 100%; */
+  background: #58189499;
 }
 
 .landing-page .parallax .parallax-background img {
   width: 100%;
   height: auto;
   position: relative;
+  mix-blend-mode: multiply;
 }
 
 .landing-page .parallax .parallax-image {
@@ -1081,13 +1164,11 @@ lila: #81689D;
 }
 
 .landing-page .parallax .description {
-  margin-top: 150px;
-  color: white;
-  padding: 5px;
+
 }
 
 .landing-page .section-presentation .description {
-  padding: 50px 5px 0;
+
 }
 
 .landing-page .parallax .description h2 {
@@ -1097,7 +1178,7 @@ lila: #81689D;
 }
 
 .landing-page .parallax .description h5 {
-  line-height: 1.8;
+  line-height: 1.4;
   font-weight: 400;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
   font-size: 20px;
@@ -1130,13 +1211,21 @@ lila: #81689D;
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  background: #fffffa;
+  display: flex;
+  border-radius: 14px;
+  margin-top: 32px;
+  box-shadow: 0 4px 12px -7px rgb(78 20 121 / 64%);
 }
 
 .landing-page .logos ul {
-  display: block;
+  display: flex;
   width: 100%;
   margin: 0px auto;
-  padding-top: 48px;
+  padding: 32px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .landing-page .logos li {
@@ -1145,16 +1234,19 @@ lila: #81689D;
 }
 
 .landing-page .section-presentation {
-  overflow: hidden;
-  width: 100%;
-  min-height: 700px;
+    overflow: hidden;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
 }
 
 .landing-page .section-presentation img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 600px;
+    height: 60vh;
+    max-height: 600px;
 }
 
 .landing-page .section-presentation .iphone-presentation {
@@ -1760,7 +1852,6 @@ lila: #81689D;
   }
 
   .landing-page .navbar-top {
-    background: rgba(0, 0, 0, 0.75);
   }
 
   .landing-page .parallax {
@@ -1814,7 +1905,7 @@ lila: #81689D;
 
 @media (min-width: 768px) {
   .landing-page .navbar-top {
-    padding-top: 10px;
+    padding: 30px;
   }
 }
 
@@ -1830,10 +1921,11 @@ lila: #81689D;
 }
 
 .icons {
-  height: 100px;
-  color: #A8C256;
-  font-size: 25px;
-  text-align: left;
+    color: #A8C256;
+    font-size: 20px;
+    text-align: right;
+    list-style: none;
+    align-content: flex-end;
 }
 
 .icons li a {
@@ -1847,21 +1939,33 @@ lila: #81689D;
   color: #AB4E68;
 }
 
+.skills-list{
+  font-size: 20px;
+}
+
+.skills-list ul{
+  margin-top: 20px;
+}
+
 .flexbox-icons {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100%; /* Ensure the parent has a specified height */
+  gap:40px;
 }
 
 .contactMeInfo {
-  margin-top: 100px;
-  min-height: 200px;
+  align-content: flex-end;
 }
 
 @media (max-width: 768px) {
   .landing-page .navbar-top {
     padding-top: 10px;
+  }
+
+  ul.nav {
+    flex-direction: column;
   }
 
   .landing-page .parallax .description {
@@ -1877,11 +1981,12 @@ lila: #81689D;
   }
 
   .logo-container .top-phrase {
-    width: 90%;
+    width: 100%;
   }
 
   .icons {
     font-size: 20px;
+    text-align: center;
   }
 
   .flexbox-icons {
