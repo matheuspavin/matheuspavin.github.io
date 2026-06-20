@@ -31,7 +31,7 @@ h1.big-text {
     font-size: calc(20px + 6vw);
     display: inline;
     line-height: 1;
-    text-transform: lowercase;
+    text-transform: none;
     width: 100%;
     margin: 0 auto;
     color: #A8C256;
