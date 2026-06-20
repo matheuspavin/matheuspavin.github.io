@@ -387,7 +387,7 @@ i {
 
 .description {
     color: #fffffa;
-    padding: 60px 30px;
+    padding: 60px 0px;
 }
 
 
@@ -1156,7 +1156,7 @@ ul.nav li {
   font-weight: 400;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
   font-size: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .landing-page .parallax .buttons {
@@ -1944,6 +1944,12 @@ ul.nav li {
 
   .landing-page .parallax .description {
     margin-top: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .landing-page .parallax .description h5 {
+    text-align: center;
   }
 
   .landing-page .parallax {
