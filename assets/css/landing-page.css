@@ -38,32 +38,6 @@ h1.big-text {
     font-weight: 300;
 }
 
-h1.big-text:hover:after {
-    content: 'Poorly written code can lead to project failure. I prioritize code readability and ease of maintenance, advocating for Test-Driven Development (TDD) to refactor code without risking system errors. I value teamwork, fostering strong bonds with colleagues to facilitate productive discussion and agreement.';
-    padding: 30px;
-    background: #a8c256eb;
-    color: #17161f;
-    border-radius: 16px;
-    position: absolute;
-    width: 50%;
-    min-width: 400px;
-    display: inline-flex;
-    margin-left: -87%;
-    /* margin-top: 5vw; */
-    font-size: 20px;
-    line-height: 1.4;
-    z-index: 4;
-    text-align: left;
-    /* box-shadow: 0 1px 8px 0px black; */
-    rotate: -2deg;
-    transition: all 1s ease-in-out;
-    border: 1px solid #17161f;
-    box-shadow: 0 4px 12px -7px rgb(78 20 121 / 64%);
-    /* max-height: 200px; */
-    overflow: scroll;
-    text-transform: none;
-    max-width: 500px;
-}
 
 h5,
 .h5 {
